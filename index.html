@@ -44,39 +44,64 @@
     .nav-links a:hover{ color: var(--accent-gold); }
 
     /* ============================= HERO ============================= */
-    #hero {
-      background: url('https://via.placeholder.com/1200x800') center/cover no-repeat;
-      min-height: 75vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-    #hero::after {
-      content:""; position:absolute; top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,0,0.55);
-    }
-    .hero-content { position: relative; z-index:1; padding:0 1rem; }
-    .hero-content h1 { font-size:2rem; margin-bottom:1rem; }
-    .hero-content p { font-size:1rem; margin-bottom:1.5rem; }
-    .btn-whatsapp {
-      display:inline-block;
-      border:2px solid white;
-      padding:0.7rem 1.5rem;
-      border-radius:40px;
-      text-transform:uppercase;
-      font-size:0.9rem;
-      font-weight:bold;
-      transition:0.3s;
-    }
-    .btn-whatsapp:hover{ background: var(--accent-gold); color: var(--dark); }
+/* HERO */
+#hero {
+  background: url('image/bg.webp') center/cover no-repeat;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--dark);
+  position: relative;
+}
 
-    @media(min-width:768px){
-      .hero-content h1{ font-size:3rem; }
-      .hero-content p{ font-size:1.2rem; }
-    }
+
+
+#hero::after {
+  content: ""; 
+  position: absolute; 
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.5); /* light overlay instead of dark */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  background: rgba(255,255,255,0.7); /* optional: subtle white box */
+  border-radius: 12px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--gray);
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  border: 2px solid var(--accent-gold);
+  background: var(--accent-gold);
+  color: white;
+  padding: 0.6rem 1.3rem;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-whatsapp:hover {
+  background: transparent;
+  color: var(--accent-gold);
+}
 
     /* ============================= SLIDER ============================= */
     #slider-section { padding:3rem 1rem; }
